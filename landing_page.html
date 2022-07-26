@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        * {
+            margin: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #1E1F31;
+            overflow-x: hidden;
+        }
+
+        .wrapper-1 {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+        }
+
+        header {
+            padding: 2.0rem 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 1.5rem;
+        }
+
+        header ul li a {
+            color: #aba9b4;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: .1rem;
+            transition: all ease 0.5s;
+        }
+
+        header ul li a:hover {
+            color: #FF0000;
+        }
+
+        header ul li a.btn-1 {
+            display: inline-block;
+            width: 18rem;
+            height: 6rem;
+            line-height: 6rem;
+            background-color: #FF0000;
+            color: #fff;
+            text-align: center;
+            font-size: 1.8rem;
+            border-radius: 5rem;
+            transition: all ease 0.5s;
+        }
+
+        header ul li a.btn-1:hover {
+            background-color: #615c59;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 5.0rem 10rem 0;
+        }
+
+        .text {
+            width: 50rem;
+            padding-right: 15rem;
+
+        }
+
+        .text p {
+            font-size: 2.8rem;
+            line-height: 4.6rem;
+            color: #fff;
+        }
+
+        .text p span {
+            color: #FF0000;
+        }
+
+        .text a {
+            position: relative;
+            display: inline-block;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            padding: 1.8rem 3rem;
+            letter-spacing: .2rem;
+            font-weight: 500;
+            margin-top: 6rem;
+            z-index: 10;
+
+        }
+
+        .text a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 5rem;
+            background-color: #FF0000;
+            z-index: -1;
+            transition: all ease 0.5s;
+
+        }
+
+        .text a:hover:before {
+            width: 20rem;
+        }
+
+        .img {
+            position: relative;
+            width: 48rem;
+            height: 48rem;
+            background: radial-gradient(50rem, #f08f538c, transparent 25rem);
+            margin-top: -5rem;
+
+        }
+
+        .wave img {
+            position: relative;
+        }
+
+        .email-icon {
+            position: absolute;
+            top: 23.5rem;
+            left: 23.5rem;
+            transform: translate(-5rem, -5rem);
+            width: 9.5rem;
+        }
+
+        .social-icons {
+            height: 50rem;
+            animation: rotation 60s linear infinite;
+
+        }
+
+        @keyframes rotation {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .social-icons img {
+            position: absolute;
+            width: 8rem;
+        }
+
+        .social-icons img:nth-child(1) {
+            top: 0;
+            left: 42%;
+
+
+
+
+        }
+
+        .social-icons img:nth-child(2) {
+            top: 25%;
+            right: 0;
+        }
+
+        .social-icons img:nth-child(3) {
+            top: 70%;
+            left: 70%;
+        }
+
+        .social-icons img:nth-child(4) {
+            top: 25%;
+            left: 0;
+        }
+
+        .social-icons img:nth-child(5) {
+            top: 70%;
+            left: 10%;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150rem;
+            line-height: 0;
+        }
+
+        .wave:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(images/wave-1.svg) repeat-x;
+            background-size: cover;
+            background-position: -1000px 0;
+            opacity: .2;
+            animation: waveOne 60s linear infinite;
+
+        }
+
+        .wave:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(images/wave-1.svg) repeat-x;
+            background-size: cover;
+            background-position: -273.2rem 0;
+            opacity: .1;
+            animation: waveOne 120s linear infinite;
+
+        }
+
+        @keyframes waveOne {
+            50% {
+                background-position: 0 0;
+            }
+        }
+
+        /* SUMEMNU */
+        /* ul ul{
+        max-width: 25rem;
+        position: absolute;
+        padding: 10px 0;
+        opacity: 0;
+        z-index: -9999;
+        transition: all ease 0.5s;
+    }
+    ul li:hover ul{
+        opacity: 1;
+        z-index: 9;
+        padding: 30px 0;
+    } 
+    ul ul li{
+        margin: 0;
+        width: 100%;
+    }
+    ul ul li a{
+        width: 100%;
+        display: inline-block;
+        padding: 20px;
+        background-color: #383a58;
+        color: #fff;
+    }
+    ul ul li:first-child a{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+    ul ul li:last-child a{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+    ul ul li a:hover{
+        background-color: #e74c3c;
+        color: #fff;
+    } */
+
+    /* form css start */
+ 
+    .form{
+    
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30%;
+    margin-bottom: 100rem;
+    margin-top: -15rem;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+.form .contact-form input{
+    width: 30rem;
+    background-color: transparent;
+    border: 0px;
+    border: transparent;
+    margin: 30px;
+    padding:5px;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+ 
+.form .contact-form input ~ span{
+    position: absolute;
+    left: 10px;
+    transition: 0.9s ease-in-out;
+    margin-top: 1rem;
+}
+.form .contact-form input:focus ~ span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .contact-form input:focus{
+   background:#fff;
+   transition: all ease 0.5s;
+   color: #000;
+}
+.form .contact-form textarea{
+    width: 30rem;
+    border: 0;
+    background-color: transparent;
+    margin: 20px;
+    font-size: 17px;
+    border-bottom: 2px solid #fff;
+}
+.form .contact-form textarea ~ span{
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    transition: 0.9s ease-in-out;
+}
+.form .contact-form textarea:focus ~ span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .contact-form textarea:focus{
+    background: #fff;
+}
+.form .contact-form input[type=submit]{
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    font-size: 15px;
+    width: 50%;
+    height: 40px;
+    margin-top: -5px;
+}
+.form .contact-form input[type=submit]:hover{
+    background-color: transparent;
+    color: dodgerblue;
+}
+    /* form css end */
+        @media (max-width: 1179px) {
+            html {
+                font-size: 55%;
+            }
+
+        }
+
+        @media (max-width: 1038px) {
+            html {
+                font-size: 45%;
+            }
+        }
+
+        @media (max-width: 849px) {
+            html {
+                font-size: 40%;
+            }
+        }
+
+        @media (max-width: 604px) {
+            html {
+                font-size: 37%;
+            }
+        }
+
+        @media (max-width: 441px) {
+            html {
+                font-size: 45%;
+
+            }
+
+
+            header ul li a.btn-1 {
+
+                width: 15rem;
+                margin: .3rem;
+                font-size: 1.8rem;
+            }
+
+            .text p {
+                font-size: .2rem;
+                line-height: 4.9rem;
+
+            }
+
+        }
+
+        @media (max-width: 755px) {
+            html {
+                font-size: 45%;
+
+            }
+
+            .content img {
+                display: none;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .logo h1 {
+                font-size: 3rem;
+                width: 20rem;
+            }
+
+            .text p {
+                font-size: 3.8rem;
+                line-height: 4.9rem;
+
+            }
+
+            .text {
+                width: 80rem;
+                padding-right: 15rem;
+
+            }
+
+            .text a {
+
+                margin-top: 9rem;
+
+
+            }
+
+            header {
+                padding: 6.0rem 10rem;
+
+            }
+
+            header ul li a.btn-1 {
+
+                width: 15rem;
+                margin: .3rem;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper-1">
+        <header>
+            <div class="logo">
+                <h1 style="color: white;">Ryan Sports Club</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <!-- <li><a href="#">Home</a></li>
+                    <li><a href="#">Facilities</a>
+                      <ul>
+                          <li><a href="#">java</a></li>
+                          <li><a href="#">Ruby</a></li>
+                          <li><a href="#">php</a></li>
+                          <li><a href="#">python</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Support</a></li> -->
+                    <li><a class="btn-1" data-bs-toggle="modal" href="#signModal" role="button">Sign Up</a>
+                    </li>
+                    <li><a class="btn-1" data-bs-toggle="modal" href="#loginModal" role="button">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet <span> consectetur adipisicing elit.</span> Et, ipsa expedita pariatur
+                    laudantium odit
+                    provident!</p>
+                <a href="index.html" class="btn-1">Get Started</a>
+            </div>
+            <div class="img">
+                <div class="social-icons">
+                    <img src="images/red-1.png" alt="">
+                    <img src="images/red-2.png" alt="">
+                    <img src="images/red-3.png" alt="">
+                    <img src="images/red-4.png" alt="">
+                    <img src="images/red-5.png" alt="">
+
+                </div>
+                <img class="email-icon" src="images/email-red.png" alt="">
+            </div>
+        </div>
+
+        <div class="wave">
+            <img src="images/wave-3.svg" alt="">
+        </div>
+    </div>
+
+
+
+    <!-- modal starts -->
+
+    <!-- Button trigger modal -->
+
+
+    <!-- sign in Modal -->
+    <div class="modal fade " id="signModal" style="font-size: 2rem;" tabindex="-1" aria-labelledby="signModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" style="background-color: transparent;">
+            <div class="modal-content text-light" style="background-color: transparent;" >
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title"  style="font-size: 2rem;" id="signModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close btn-close- light" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body" style="font-size: 2rem;">
+                    <!-- <form class="row g-3" style="font-size: 2rem;">
+                        <div class="col-md-4" style="font-size: 2rem;">
+                          <label for="validationDefault01" class="form-label" style="font-size: 2rem;">First name</label>
+                          <input type="text" class="form-control" style="font-size: 2rem;" id="validationDefault01" placeholder="Enter first name" required>
+                        </div>
+                        <div class="col-md-4" style="font-size: 2rem;">
+                          <label for="validationDefault02"  style="font-size: 2rem;"class="form-label">Last name</label>
+                          <input type="text" style="font-size: 2rem;" class="form-control" id="validationDefault02"  placeholder="Enter last name">
+                        </div>
+                        <div class="col-md-4" style="font-size: 2rem;">
+                          <label for="validationDefaultUsername" style="font-size: 2rem;" class="form-label">Email</label>
+                          <div class="input-group" style="font-size: 2rem;">
+                            <span class="input-group-text" style="font-size: 2rem;" id="inputGroupPrepend2">@</span>
+                            <input type="text" style="font-size: 2rem;" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                          </div>
+                        </div>
+                        <div class="col-md-3"style="font-size: 2rem;">
+                          <label for="validationDefault03"style="font-size: 2rem;" class="form-label">password</label>
+                          <input type="text"style="font-size: 2rem;" class="form-control" id="validationDefault03" required>
+                        </div>
+                        <div class="col-md-3" style="font-size: 2rem;">
+                          <label for="validationDefault04" style="font-size: 2rem;" class="form-label">country</label>
+                          <select class="form-select" style="font-size: 2rem;" id="validationDefault04" required>
+                            <option active value=""style="font-size: 2rem;">Pakistan</option>
+                            <option value="" style="font-size: 2rem;">Germany</option>
+                            <option value="" style="font-size: 2rem;">India</option>
+                            <option value="" style="font-size: 2rem;">Afghanistan</option>
+                            <option value="" style="font-size: 2rem;">Turkey</option>
+                            <option value="" style="font-size: 2rem;">Iran</option>
+                            
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="validationDefault05"style="font-size: 2rem;" class="form-label">Which sports you like</label>
+                          <input type="text"style="font-size: 2rem;" class="form-control" id="validationDefault05" required>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input"style="font-size: 2rem;" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label"style="font-size: 2rem;" for="invalidCheck2">
+                              Agree to terms and conditions
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-light text-dark" style="font-size: 2rem;"  type="submit">Sign in</button>
+                        </div>
+                      </form> -->
+                    
+                      <form>
+                        <div class="form">
+                            <div class="right">
+                                <div class="contact-form">
+                                    <input type="text" required>
+                                    <span>Full name</span>
+                                </div>
+            
+                                <div class="contact-form">
+                                    <input type="E-mail" required>
+                                    <span>E-mail</span>
+                                </div>
+                                <div class="contact-form">
+                                    <input type="E-mail" required>
+                                    <span>Pasword</span>
+                                </div>
+            
+                                <!-- <div class="contact-form">
+                                    <textarea name="text"></textarea>
+                                    <span>type your message.....</span>
+                                </div> -->
+            
+                                <div class="contact-form">
+                                    <input type="submit" name="Sign in">
+                                </div>
+            
+                            </div>
+                        </div>
+                    </form>
+                
+                    </div>
+                <!-- <div class="modal-footer"  style="font-size: 2rem;">
+                    <button type="button"  style="font-size: 2rem;" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button"  style="font-size: 2rem;" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!--sign in modal ends -->
+    <!-- login in Modal -->
+    <div class="modal fade " id="loginModal" style="font-size: 2rem;" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog bg-transparrent modal-dialog-centered" >
+            <div class="modal-content  bg-transparrent text-light" style="background-color: transparent;">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title"  style="font-size: 2rem;" id="loginModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form">
+                            <div class="right">
+                                <!-- <div class="contact-form">
+                                    <input type="text" required>
+                                    <span>Full name</span>
+                                </div> -->
+            
+                                <div class="contact-form">
+                                    <input type="E-mail" required>
+                                    <span>E-mail</span>
+                                </div>
+                                <div class="contact-form">
+                                    <input type="E-mail" required>
+                                    <span>Password</span>
+                                </div>
+            
+                                <!-- <div class="contact-form">
+                                    <textarea name="text"></textarea>
+                                    <span>type your message.....</span>
+                                </div> -->
+            
+                                <div class="contact-form">
+                                    <input type="submit" name="Login">
+                                </div>
+            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer"  style="font-size: 2rem;">
+                    <button type="button"  style="font-size: 2rem;" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button"  style="font-size: 2rem;" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!--login modal ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- script tag -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- modal js -->
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
+</body>
+
+</html>

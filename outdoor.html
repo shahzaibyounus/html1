@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive gim website design</title>
+
+    <!-- font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- swiper cdn  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style/style1.css">
+    <!-- Auto Swiper's CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
+
+    <style>
+        .list {
+            float: right;
+
+        }
+
+        .a {
+            width: 200px;
+            color: white;
+            display: block;
+            text-decoration: none;
+
+            text-align: left;
+
+            /* border-radius: 10px; */
+
+        }
+
+
+
+        .ull {
+            background: rgb(12, 12, 12);
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+        }
+
+        .list-d{
+      float: none;
+      background-color: #333;
+  }
+  .list-d:hover{
+     background-color: red;
+  }
+
+        .list:hover .ull {
+            display: block;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header section starts -->
+    <div class="header">
+        <a href="#" class="logo"><span>R</span>yan Sports Club</a>
+
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+
+            <a class="aa" href="index.html">Home</a>
+            <div class="list"> <a class="aa" href="">Facilities <i class="fa-solid fa-caret-down"></i></a>
+
+
+                <div class="ull">
+                    <li class="a list list-d"><a href="indoor.html">Indoor Sports</a></li>
+                    <li class="a list list-d"><a href="outdoor.html">Outdoor Sports</a></li>
+                    <li class="a list list-d"><a href="recreation.html">Recreation</a></li>
+
+                </div>
+            </div>
+
+            <a class="aa" href="membership.html">Membership</a>
+            <a class="aa" href="activity.html">Activities</a>
+            <a class="aa" href="contact_us.html">Contact Us</a>
+            <a class="aa" href="gallery.HTML">Gallery</a>
+
+        </nav>
+    </div>
+
+
+
+
+
+
+    <!-- header section ends -->
+    <!-- home section starts -->
+    <section class="home section" id="outdoor">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide" style="background: url(img/hiking\ slider.jpg) no-repeat;">
+                    <div class="content">
+                        <span>be strong, be fit</span>
+                        <h3>Make your self stronger than your excersice, </h3>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(img/mountaineering\ slide.jpg) no-repeat;">
+                    <div class="content">
+                        <span>used for a general sports club</span>
+                        <h3>Sports clubs range from organisations , </h3>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(img/horse\ slider.jpg) no-repeat;">
+                    <div class="content">
+                        <span>be strong, be fit</span>
+                        <h3>whose members play togetherthan your excersice, </h3>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next" style="color: red;"></div>
+            <div class="swiper-button-prev" style="color: red;"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+    <section class="about section" id="indoor sports">
+        <div class="image">
+            <img src="img/is.jpg" alt="">
+        </div>
+        <div class="content">
+            <span>About Indoor Sports</span>
+            <h3 class="title">Every day is a chance to become better</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fugit quasi recusandae, tenetur nobis,
+                reprehenderit consequatur, sint enim praesentium maiores voluptate molestias ipsum officiis mollitia
+                similique. Error dolorum harum provident.</p>
+
+            <div class="box-container">
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>body and mind</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, molestias.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>healthy life</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, molestias.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>strategeles</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, molestias.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>workout</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, molestias.</p>
+                </div>
+            </div>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </section>
+
+
+    <!-- card section starts -->
+    <h1 class="heading"> <span> Outdoor Sports</span></h1>
+    <br>
+    <div class="container">
+        <div class="box1">
+            <div class="imgbx">
+                <img src="img/hike.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Hiking</h2>
+                <p>hiking, walking in nature as a recreational activity. Especially among those with sedentary
+                    occupations, hiking is a natural exercise that promotes physical fitness, is economical and
+                    convenient, and requires no special equipment. Because hikers can walk as far as they want, there is
+                    no physical strain unless they walk among hills or mountains.</p>
+            </div>
+
+        </div>
+        <div class="box1">
+            <div class="imgbx">
+                <img src="img/horse.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Horse Riding</h2>
+                <p>Horseback riding is a very rewarding and accessible activity for all of us, which gives us the
+                    possibility to disconnect from the world, ride on trails and discover landscapes during our riding
+                    holidays.
+
+                    It also allows us to practice equestrian sports, such as jumping, dressage, Eventing or Polo.</p>
+            </div>
+
+        </div>
+        <div class="box1">
+            <div class="imgbx">
+                <img src="img/mountaineer.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Mountaineering</h2>
+                <p>Mountaineering, or alpinism, is the set of outdoor activities that involves ascending tall mountains.
+                    Mountaineering-related activities include traditional outdoor climbing, skiing and traversing via
+                    ferratas. Indoor climbing, sport climbing and bouldering are also considered variants of
+                    mountaineering by some.</p>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+    <!-- card section end -->
+    <h1 class="heading"> <span> Famous Players </span></h1>
+    <div class="container1">
+        <div class="row">
+            <div class="col-md col-sm-6">
+                <div class="card1">
+                    <img src="img/ali sadpara.jpg" alt="">
+                    <div class="card-text">
+                        <h3>Ali Sadpara</h3>
+                        <h5>Famous Mountaneer</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md col-sm-6">
+                <div class="card1">
+                    <img src="img/mclain.jpg" alt="">
+                    <div class="card-text">
+                        <h3>Mclain Ward</h3>
+                        <h5>Famous Horse Rider</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md col-sm-6">
+                <div class="card1">
+                    <img src="img/andrew skurka.jpeg" alt="">
+                    <div class="card-text">
+                        <h3>Andrew Skurka</h3>
+                        <h5>Famous Hiker</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- foo -->
+    <div class="footer">
+        <div class="row">
+            <div class="colm">
+                <h1 class="clr-1" >Rayan sports club</h1>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iste nesciunt iure doloribus provident
+                    soluta!</p>
+            </div>
+            <div class="colm">
+                <h3 class="clr-1">CLUB <div class="underline"><span></span></div></h3>
+                <p>ITPL Road</p>
+                <p>Whitefeild, banglore</p>
+                <p>Karnanta, PIN 560056, Pakistan</p>
+                <p class="email-id">abc@gmail.com</p>
+                <h4>+92 1234567789</h4>
+            </div>
+            <div class="colm">
+                <h3 class="clr-1">LINKS <div class="underline"><span></span></div></h3>
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            </div>
+            <div class="colm">
+                <h3 class="clr-1">FEEDBACK<div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="fa-solid fa-envelope far"></i>
+                  <input type="email" placeholder="Enter your email id" required>
+                  <button type="submit"><i class="fa-solid fas fa-arrow-right"></i></button>
+                </form>
+    
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+    
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Rayan Sports Club 2021 - All Rights Reserved</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- swiper cdn -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="js/js.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>
